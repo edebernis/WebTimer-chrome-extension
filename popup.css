@@ -1,0 +1,49 @@
+body {
+	width: 400px;
+}
+#current {
+	width: 325px;
+	height: 40px;
+	margin: auto;
+	font-family: Calibri, Helvetica, sans-serif;
+	font-size: 15px;
+	border-bottom: 1px solid black;
+	padding-left: 22px;
+}
+#top_sites {
+	font-family: Calibri, Helvetica, sans-serif;
+	font-size: 13px;
+	margin: auto;
+	width: 325px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+#top_sites tr {
+	height: 25px;
+}
+.favicons {
+	width: 30px;
+}
+.site_names {
+	width: 150px;
+}
+.site_names a {
+	text-decoration: none;
+	color: black;
+}
+.site_names a:hover {
+	color: blue;
+}
+.site_browsing_times {
+	width: 150px;
+}
+.site_ranks {
+	width: 20px;
+}
+#reset {
+	visibility: hidden;
+}
+#see_all {
+	float: right;
+	visibility: hidden;
+}

@@ -1,0 +1,55 @@
+body {
+	background-color: black;
+}
+#main {
+	width: 500px;
+	margin: auto;
+	background-color: #FFFFFF;
+	border: 2px solid white;
+	border-radius: 5px;
+}
+#title {
+	width: 325px;
+	height: 40px;
+	margin: auto;
+	margin-top: 20px;
+	border-bottom: 1px solid black;
+	
+}
+#title p {
+	width: 100%;
+	font-family: Calibri, Helvetica, sans-serif;
+	font-size: 20px;
+	margin: auto;
+	text-align: center;
+}
+#all_sites {
+	font-family: Calibri, Helvetica, sans-serif;
+	font-size: 14px;
+	margin: auto;
+	width: 325px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+#all_sites tr {
+	height: 25px;
+}
+.favicons {
+	width: 30px;
+}
+.site_names {
+	width: 150px;
+}
+.site_names a {
+	text-decoration: none;
+	color: black;
+}
+.site_names a:hover {
+	color: blue;
+}
+.site_browsing_times {
+	width: 150px;
+}
+.site_ranks {
+	width: 20px;
+}
