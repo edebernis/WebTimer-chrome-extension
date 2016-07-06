@@ -10,10 +10,10 @@ var newSiteWait = 2000; // milliseconds
 var blacklist = ["newtab", "devtools", "chrome", "settings", "undefined"];
 var nbTopToDisplay = 5;
 var extensionId = chrome.i18n.getMessage("@@extension_id");
+var isFocused = true;
 
 // Add extensionId to blacklist
 blacklist.push(extensionId);
-
 
 // Class Site
 function Site (name, favicon) {
@@ -27,15 +27,20 @@ function updateBrowsingTime () {
 }
 
 
-
 function update () {
 	updateSites();
+	chrome.windows.getCurrent(function(browser){
+		isFocused = browser.focused;
+	})
 	if (siteList != []) updateDisplay();
 }
 
-function updateSites () {
 
-	chrome.tabs.getSelected(null, function(tab) {
+function updateSites () {
+	if (!isFocused) return;
+
+	chrome.tabs.query({active: true, currentWindow: true}, function(arrayOfTabs) {
+		var tab = arrayOfTabs[0];
 		
 		// Set previous and current tabs
 		var previousTabUrl = currentTab != undefined ? currentTab.url : '';
